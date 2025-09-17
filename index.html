@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPR Quiz Portal - Intellectual Property Rights</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Home Page -->
+        <div id="home-page" class="page active">
+            <div class="container">
+                <header class="quiz-header">
+                    <h1 class="main-title">IPR Quiz Portal</h1>
+                    <p class="subtitle">Introduction to Intellectual Property Rights</p>
+                    <div class="header-decoration"></div>
+                </header>
+
+                <div class="unit-container">
+                    <div class="unit-card">
+                        <div class="unit-icon">⚖️</div>
+                        <h3>HU1006-1</h3>
+                        <h4>Unit 1: Introduction to IPR</h4>
+                        <p>Comprehensive coverage of IPR basics, Indian IP laws, international treaties, and IP management strategies.</p>
+                        <div class="unit-stats">
+                            <span>100 Questions</span>
+                        </div>
+                        <button class="btn btn--primary start-quiz-btn">Start Quiz</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quiz Page -->
+        <div id="quiz-page" class="page">
+            <div class="container">
+                <div class="quiz-header">
+                    <button id="back-to-home" class="btn btn--outline back-btn">← Back to Home</button>
+                    <div class="quiz-title">
+                        <h2 id="current-unit-title">IPR Quiz - Complete Question Bank</h2>
+                    </div>
+                </div>
+
+                <div class="quiz-progress">
+                    <div class="progress-bar">
+                        <div id="progress-fill" class="progress-fill"></div>
+                    </div>
+                    <div class="progress-text">
+                        Question <span id="current-question">1</span> of <span id="total-questions">100</span>
+                    </div>
+                </div>
+
+                <div class="question-container">
+                    <div class="question-card">
+                        <h3 id="question-text" class="question-text">Loading question...</h3>
+                        
+                        <div id="options-container" class="options-container">
+                            <button class="option-btn" data-option="A">
+                                <span class="option-letter">A</span>
+                                <span class="option-text">Option A</span>
+                            </button>
+                            <button class="option-btn" data-option="B">
+                                <span class="option-letter">B</span>
+                                <span class="option-text">Option B</span>
+                            </button>
+                            <button class="option-btn" data-option="C">
+                                <span class="option-letter">C</span>
+                                <span class="option-text">Option C</span>
+                            </button>
+                            <button class="option-btn" data-option="D">
+                                <span class="option-letter">D</span>
+                                <span class="option-text">Option D</span>
+                            </button>
+                        </div>
+
+                        <div id="feedback" class="feedback hidden">
+                            <div id="feedback-message" class="feedback-message"></div>
+                        </div>
+
+                        <div class="navigation-controls">
+                            <button id="prev-btn" class="btn btn--outline nav-btn">
+                                ← Previous Question
+                            </button>
+                            <button id="next-btn" class="btn btn--primary nav-btn">
+                                Next Question →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quiz-score">
+                    <span>Score: <span id="current-score">0</span>/<span id="questions-answered">100</span></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Page -->
+        <div id="results-page" class="page">
+            <div class="container">
+                <div class="results-container">
+                    <div class="results-card">
+                        <div class="results-icon">🎉</div>
+                        <h2>Quiz Completed!</h2>
+                        <h3 id="results-unit-title">IPR Quiz Results</h3>
+                        
+                        <div class="score-display">
+                            <div class="final-score">
+                                <span id="final-score-number">0</span><span class="score-total">/100</span>
+                            </div>
+                            <div class="percentage">
+                                <span id="percentage-score">0%</span>
+                            </div>
+                        </div>
+
+                        <div id="performance-message" class="performance-message">
+                            Great job!
+                        </div>
+
+                        <div class="results-actions">
+                            <button id="restart-quiz" class="btn btn--primary">Restart Quiz</button>
+                            <button id="back-to-home-results" class="btn btn--secondary">Back to Home</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
